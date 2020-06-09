@@ -54,8 +54,6 @@ app.post('/send', (req, res) => {
 
   // setup email data with unicode symbols
   let mailOptions = {
-      // from: '"Venugopal Balaji" <venugopalportfolio@gmail.com>', // sender address
-      // from:"venugopalportfolio@gmail.com",
       from:"venugopalportfolio@gmail.com",
       to: 'venugopalportfolio@gmail.com', // list of receivers
       subject: req.body.subject, // Subject line
@@ -75,15 +73,11 @@ app.post('/send', (req, res) => {
       type: 'oauth2',
       user: process.env.EMAIL, // generated ethereal user
       pass: process.env.PASSWORD,  // generated ethereal password
-      // user:"venugopalportfolio@gmail.com",
-      // pass:"Gunners12#",
+     
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       refreshToken: process.env.REFRESH_TOKEN,
-      // clientId: '931610096152-lqc33sev10o6o97g5i7ajt1k9uefr793.apps.googleusercontent.com',
-      // clientSecret: '8ICiInnq6YHSSkTShKY4eq0Q',
-      // refreshToken: '1//04gZY-STq2AK2CgYIARAAGAQSNwF-L9IrBoIRrJPW7iM_wke7n4Yo3ukeWDoWWMmgvZmDeLrYj9Az9IQoaTP5siTloj5WdWMVcLI',
-    },
+      },
     tls:{
     rejectUnauthorized:false
     }
