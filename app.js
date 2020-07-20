@@ -64,4 +64,4 @@ app.post('/send', (req, res) => {
   res.json("SENT")
   });
 
-app.listen(6010, () => console.log('Server started...'));
+app.listen(process.env.PORT||6010 , () => console.log('Server started...'));
